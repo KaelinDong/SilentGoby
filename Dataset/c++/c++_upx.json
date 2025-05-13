@@ -1,0 +1,2417 @@
+[
+    {
+        "cve": {
+            "id": "CVE-2019-20805",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2020-06-01T14:15:09.977",
+            "lastModified": "2020-06-02T17:03:05.250",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "p_lx_elf.cpp in UPX before 3.96 has an integer overflow during unpacking via crafted values in a PT_DYNAMIC segment."
+                },
+                {
+                    "lang": "es",
+                    "value": "En el archivo p_lx_elf.cpp en UPX versiones anteriores a 3.96, presenta un desbordamiento de enteros durante una despaquetizaci\u00f3n por medio de valores dise\u00f1ados en un segmento de PT_DYNAMIC."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 5.5,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 3.6
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 4.3
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-190"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "3.96",
+                                    "matchCriteriaId": "2A4A2432-18AE-4B27-A527-030DD9D34F93"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/commit/8be9da8280dfa69d5df4417d4d81bda1cab78010",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/upx/upx/issues/317",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2020-27787",
+            "sourceIdentifier": "secalert@redhat.com",
+            "published": "2022-08-18T19:15:14.210",
+            "lastModified": "2022-08-22T19:13:39.427",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A Segmentaation fault was found in UPX in invert_pt_dynamic() function in p_lx_elf.cpp. An attacker with a crafted input file allows invalid memory address access that could lead to a denial of service."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se ha encontrado un fallo de segmentaci\u00f3n en UPX en la funci\u00f3n invert_pt_dynamic() en el archivo p_lx_elf.cpp. Un atacante con un archivo de entrada dise\u00f1ado permite el acceso a direcciones de memoria no v\u00e1lidas que podr\u00eda conllevar a una denegaci\u00f3n de servicio."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 5.5,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 3.6
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "NVD-CWE-noinfo"
+                        }
+                    ]
+                },
+                {
+                    "source": "secalert@redhat.com",
+                    "type": "Secondary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-119"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "3.96",
+                                    "matchCriteriaId": "2A4A2432-18AE-4B27-A527-030DD9D34F93"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/commit/e2f60adc95334f47e286838dac33160819c5d74d",
+                    "source": "secalert@redhat.com",
+                    "tags": [
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/upx/upx/issues/333",
+                    "source": "secalert@redhat.com",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2020-27790",
+            "sourceIdentifier": "secalert@redhat.com",
+            "published": "2022-08-18T19:15:14.270",
+            "lastModified": "2022-08-23T14:55:09.127",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A floating point exception issue was discovered in UPX in PackLinuxElf64::invert_pt_dynamic() function of p_lx_elf.cpp file. An attacker with a crafted input file could trigger this issue that could cause a crash leading to a denial of service. The highest impact is to Availability."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se ha detectado un problema de excepci\u00f3n de punto flotante en UPX en la funci\u00f3n PackLinuxElf64::invert_pt_dynamic() del archivo p_lx_elf.cpp. Un atacante con un archivo de entrada dise\u00f1ado podr\u00eda desencadenar este problema que podr\u00eda causar un fallo que conlleva una denegaci\u00f3n de servicio. El mayor impacto es la disponibilidad."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 5.5,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 3.6
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-369"
+                        }
+                    ]
+                },
+                {
+                    "source": "secalert@redhat.com",
+                    "type": "Secondary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-369"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "3.96",
+                                    "matchCriteriaId": "2A4A2432-18AE-4B27-A527-030DD9D34F93"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/commit/eb90eab6325d009004ffb155e3e33f22d4d3ca26",
+                    "source": "secalert@redhat.com",
+                    "tags": [
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/upx/upx/issues/331",
+                    "source": "secalert@redhat.com",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2020-27788",
+            "sourceIdentifier": "secalert@redhat.com",
+            "published": "2022-08-18T20:15:08.947",
+            "lastModified": "2022-08-22T19:23:55.440",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "An out-of-bounds read access vulnerability was discovered in UPX in PackLinuxElf64::canPack() function of p_lx_elf.cpp file. An attacker with a crafted input file could trigger this issue that could cause a crash leading to a denial of service."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se ha detectado una vulnerabilidad de acceso de lectura fuera de l\u00edmites en UPX en la funci\u00f3n PackLinuxElf64::canPack() del archivo p_lx_elf.cpp. Un atacante con un archivo de entrada dise\u00f1ado podr\u00eda desencadenar este problema que podr\u00eda causar un bloqueo conllevando a una denegaci\u00f3n de servicio."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 5.5,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 3.6
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-125"
+                        }
+                    ]
+                },
+                {
+                    "source": "secalert@redhat.com",
+                    "type": "Secondary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-125"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "3.96",
+                                    "matchCriteriaId": "2A4A2432-18AE-4B27-A527-030DD9D34F93"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/commit/1bb93d4fce9f1d764ba57bf5ac154af515b3fc83",
+                    "source": "secalert@redhat.com",
+                    "tags": [
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/upx/upx/issues/332",
+                    "source": "secalert@redhat.com",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2023-23456",
+            "sourceIdentifier": "patrick@puiterwijk.org",
+            "published": "2023-01-12T19:15:24.693",
+            "lastModified": "2024-04-19T14:15:08.427",
+            "vulnStatus": "Modified",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A heap-based buffer overflow issue was discovered in UPX in PackTmt::pack() in p_tmt.cpp file. The flow allows an attacker to cause a denial of service (abort) via a crafted file."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se descubri\u00f3 un problema de desbordamiento de b\u00fafer de almacenamiento din\u00e1mico en UPX en PackTmt::pack() en el archivo p_tmt.cpp. El flujo permite a un atacante provocar una denegaci\u00f3n de servicio (aborto) a trav\u00e9s de un archivo manipulado."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 5.5,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 3.6
+                    },
+                    {
+                        "source": "patrick@puiterwijk.org",
+                        "type": "Secondary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "LOW",
+                            "integrityImpact": "LOW",
+                            "availabilityImpact": "LOW",
+                            "baseScore": 5.3,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 3.4
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                },
+                {
+                    "source": "patrick@puiterwijk.org",
+                    "type": "Secondary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "2022-11-24",
+                                    "matchCriteriaId": "CB529776-278E-419A-B8E1-F7A101A77E24"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:fedoraproject:fedora:36:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "5C675112-476C-4D7C-BCB9-A2FB2D0BC9FD"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:fedoraproject:fedora:37:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "E30D0E6F-4AE8-4284-8716-991DFA48CC5D"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2160381",
+                    "source": "patrick@puiterwijk.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/upx/upx/commit/510505a85cbe45e51fbd470f1aa8b02157c429d4",
+                    "source": "patrick@puiterwijk.org",
+                    "tags": [
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/upx/upx/issues/632",
+                    "source": "patrick@puiterwijk.org",
+                    "tags": [
+                        "Exploit",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/EL3BVKIGG3SH6I3KPOYQAWCBD4UMPOPI/",
+                    "source": "patrick@puiterwijk.org"
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/TGEP3FBNRZXGLIA2B2ICMB32JVMPREFZ/",
+                    "source": "patrick@puiterwijk.org"
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2023-23457",
+            "sourceIdentifier": "patrick@puiterwijk.org",
+            "published": "2023-01-12T19:15:24.810",
+            "lastModified": "2024-04-19T14:15:08.730",
+            "vulnStatus": "Modified",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A Segmentation fault was found in UPX in PackLinuxElf64::invert_pt_dynamic() in p_lx_elf.cpp. An attacker with a crafted input file allows invalid memory address access that could lead to a denial of service."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se encontr\u00f3 una falla de segmentaci\u00f3n en UPX en PackLinuxElf64::invert_pt_dynamic() en p_lx_elf.cpp. Un atacante con un archivo de entrada manipulado permite el acceso a una direcci\u00f3n de memoria no v\u00e1lida que podr\u00eda provocar una denegaci\u00f3n de servicio."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 5.5,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 3.6
+                    },
+                    {
+                        "source": "patrick@puiterwijk.org",
+                        "type": "Secondary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:L",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "LOW",
+                            "integrityImpact": "LOW",
+                            "availabilityImpact": "LOW",
+                            "baseScore": 5.3,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 3.4
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-119"
+                        }
+                    ]
+                },
+                {
+                    "source": "patrick@puiterwijk.org",
+                    "type": "Secondary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-119"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "2022-11-23",
+                                    "matchCriteriaId": "191334EB-C1FD-4A4C-A48A-139452FD5DF4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:fedoraproject:fedora:36:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "5C675112-476C-4D7C-BCB9-A2FB2D0BC9FD"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:fedoraproject:fedora:37:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "E30D0E6F-4AE8-4284-8716-991DFA48CC5D"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2160382",
+                    "source": "patrick@puiterwijk.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/upx/upx/commit/779b648c5f6aa9b33f4728f79dd4d0efec0bf860",
+                    "source": "patrick@puiterwijk.org",
+                    "tags": [
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/upx/upx/issues/631",
+                    "source": "patrick@puiterwijk.org",
+                    "tags": [
+                        "Exploit",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/EL3BVKIGG3SH6I3KPOYQAWCBD4UMPOPI/",
+                    "source": "patrick@puiterwijk.org"
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/TGEP3FBNRZXGLIA2B2ICMB32JVMPREFZ/",
+                    "source": "patrick@puiterwijk.org"
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2021-43311",
+            "sourceIdentifier": "patrick@puiterwijk.org",
+            "published": "2023-03-24T20:15:08.223",
+            "lastModified": "2023-03-28T18:05:07.223",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A heap-based buffer overflow was discovered in upx, during the generic pointer 'p' points to an inaccessible address in func get_le32(). The problem is essentially caused in PackLinuxElf32::elf_lookup() at p_lx_elf.cpp:5382."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 7.5,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 3.6
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                },
+                {
+                    "source": "patrick@puiterwijk.org",
+                    "type": "Secondary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-119"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "4.0.0",
+                                    "matchCriteriaId": "1E4C95CD-E2A9-47E3-9866-FD4B7ECF14AA"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/issues/380",
+                    "source": "patrick@puiterwijk.org",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Patch"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2021-43312",
+            "sourceIdentifier": "patrick@puiterwijk.org",
+            "published": "2023-03-24T20:15:08.270",
+            "lastModified": "2023-03-28T18:06:01.347",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A heap-based buffer overflow was discovered in upx, during the variable 'bucket' points to an inaccessible address. The issue is being triggered in the function PackLinuxElf64::invert_pt_dynamic at p_lx_elf.cpp:5239."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 7.5,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 3.6
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                },
+                {
+                    "source": "patrick@puiterwijk.org",
+                    "type": "Secondary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-119"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "4.0.0",
+                                    "matchCriteriaId": "1E4C95CD-E2A9-47E3-9866-FD4B7ECF14AA"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/issues/379",
+                    "source": "patrick@puiterwijk.org",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Patch"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2021-43313",
+            "sourceIdentifier": "patrick@puiterwijk.org",
+            "published": "2023-03-24T20:15:08.317",
+            "lastModified": "2023-03-28T18:06:11.097",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A heap-based buffer overflow was discovered in upx, during the variable 'bucket' points to an inaccessible address. The issue is being triggered in the function PackLinuxElf32::invert_pt_dynamic at p_lx_elf.cpp:1688."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 7.5,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 3.6
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                },
+                {
+                    "source": "patrick@puiterwijk.org",
+                    "type": "Secondary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-119"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "4.0.0",
+                                    "matchCriteriaId": "1E4C95CD-E2A9-47E3-9866-FD4B7ECF14AA"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/issues/378",
+                    "source": "patrick@puiterwijk.org",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Patch"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2021-43314",
+            "sourceIdentifier": "patrick@puiterwijk.org",
+            "published": "2023-03-24T20:15:08.363",
+            "lastModified": "2023-03-28T17:48:11.220",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A heap-based buffer overflows was discovered in upx, during the generic pointer 'p' points to an inaccessible address in func get_le32(). The problem is essentially caused in PackLinuxElf32::elf_lookup() at p_lx_elf.cpp:5368"
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 7.5,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 3.6
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                },
+                {
+                    "source": "patrick@puiterwijk.org",
+                    "type": "Secondary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-119"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "4.0.0",
+                                    "matchCriteriaId": "1E4C95CD-E2A9-47E3-9866-FD4B7ECF14AA"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/issues/380",
+                    "source": "patrick@puiterwijk.org",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Patch"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2021-43315",
+            "sourceIdentifier": "patrick@puiterwijk.org",
+            "published": "2023-03-24T20:15:08.417",
+            "lastModified": "2023-03-28T17:56:30.597",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A heap-based buffer overflows was discovered in upx, during the generic pointer 'p' points to an inaccessible address in func get_le32(). The problem is essentially caused in PackLinuxElf32::elf_lookup() at p_lx_elf.cpp:5349"
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 7.5,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 3.6
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                },
+                {
+                    "source": "patrick@puiterwijk.org",
+                    "type": "Secondary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-119"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "4.0.0",
+                                    "matchCriteriaId": "1E4C95CD-E2A9-47E3-9866-FD4B7ECF14AA"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/issues/380",
+                    "source": "patrick@puiterwijk.org",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Patch"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2021-43316",
+            "sourceIdentifier": "patrick@puiterwijk.org",
+            "published": "2023-03-24T20:15:08.460",
+            "lastModified": "2023-03-28T17:15:31.773",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A heap-based buffer overflow was discovered in upx, during the generic pointer 'p' points to an inaccessible address in func get_le64()."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 7.5,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 3.6
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                },
+                {
+                    "source": "patrick@puiterwijk.org",
+                    "type": "Secondary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-119"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "4.0.0",
+                                    "matchCriteriaId": "1E4C95CD-E2A9-47E3-9866-FD4B7ECF14AA"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/issues/381",
+                    "source": "patrick@puiterwijk.org",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Patch"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2021-43317",
+            "sourceIdentifier": "patrick@puiterwijk.org",
+            "published": "2023-03-24T20:15:08.517",
+            "lastModified": "2023-03-28T17:56:40.837",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A heap-based buffer overflows was discovered in upx, during the generic pointer 'p' points to an inaccessible address in func get_le32(). The problem is essentially caused in PackLinuxElf64::elf_lookup() at p_lx_elf.cpp:5404"
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 7.5,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 3.6
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                },
+                {
+                    "source": "patrick@puiterwijk.org",
+                    "type": "Secondary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-119"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "4.0.0",
+                                    "matchCriteriaId": "1E4C95CD-E2A9-47E3-9866-FD4B7ECF14AA"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/issues/380",
+                    "source": "patrick@puiterwijk.org",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Patch"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2021-46179",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2023-08-22T19:16:21.883",
+            "lastModified": "2023-08-25T19:52:59.843",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "Reachable Assertion vulnerability in upx before 4.0.0 allows attackers to cause a denial of service via crafted file passed to the the readx function."
+                },
+                {
+                    "lang": "es",
+                    "value": "La vulnerabilidad de aserci\u00f3n alcanzable en upx antes de 4.0.0 permite a los atacantes causar una denegaci\u00f3n de servicio a trav\u00e9s de un archivo manipulado pasado a la funci\u00f3n readx."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 6.5,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 3.6
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-617"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "4.0.0",
+                                    "matchCriteriaId": "1E4C95CD-E2A9-47E3-9866-FD4B7ECF14AA"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/issues/545",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2018-11243",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2018-05-18T17:29:00.247",
+            "lastModified": "2023-11-07T02:51:38.927",
+            "vulnStatus": "Modified",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "PackLinuxElf64::unpack in p_lx_elf.cpp in UPX 3.95 allows remote attackers to cause a denial of service (double free), limit the ability of a malware scanner to operate on the entire original data, or possibly have unspecified other impact via a crafted file."
+                },
+                {
+                    "lang": "es",
+                    "value": "PackLinuxElf64::unpack en p_lx_elf.cpp en UPX 3.95 permite que atacantes remotos provoquen una denegaci\u00f3n de servicio (doble liberaci\u00f3n o double free), limiten la capacidad de un esc\u00e1ner de malware para operar en todos los datos originales o que provoquen otro tipo de impacto sin especificar mediante un archivo manipulado."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV30": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.0",
+                            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 7.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-415"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:3.95:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "7986910F-E5B0-488F-813B-D6B4367F16F4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00001.html",
+                    "source": "cve@mitre.org"
+                },
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00003.html",
+                    "source": "cve@mitre.org"
+                },
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00007.html",
+                    "source": "cve@mitre.org"
+                },
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00008.html",
+                    "source": "cve@mitre.org"
+                },
+                {
+                    "url": "https://github.com/upx/upx/blob/devel/NEWS",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Release Notes"
+                    ]
+                },
+                {
+                    "url": "https://github.com/upx/upx/issues/206",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/upx/upx/issues/207",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/D7XU42G6MUQQXHWRP7DCF2JSIBOJ5GOO/",
+                    "source": "cve@mitre.org"
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/EUTVSTXAFTD552NO2K2RIF6MDQEHP3BE/",
+                    "source": "cve@mitre.org"
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2019-14295",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2019-07-27T19:15:12.050",
+            "lastModified": "2023-11-07T03:04:52.930",
+            "vulnStatus": "Modified",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "An Integer overflow in the getElfSections function in p_vmlinx.cpp in UPX 3.95 allows remote attackers to cause a denial of service (crash) via a skewed offset larger than the size of the PE section in a UPX packed executable, which triggers an allocation of excessive memory."
+                },
+                {
+                    "lang": "es",
+                    "value": "Un desbordamiento de enteros en la funci\u00f3n getElfSections en el archivo p_vmlinx.cpp en UPX versi\u00f3n 3.95, permite a los atacantes remotos causar una denegaci\u00f3n de servicio (bloqueo de aplicaci\u00f3n) por medio de un desplazamiento skewed mayor que el tama\u00f1o de la secci\u00f3n PE en un ejecutable empaquetado UPX, lo que desencadena una asignaci\u00f3n excesiva de memoria."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV30": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.0",
+                            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 5.5,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 3.6
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 4.3
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-190"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:3.95:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "7986910F-E5B0-488F-813B-D6B4367F16F4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/issues/286",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/MOCJ43HTM45GZCAQ2FLEBDNBM76V22RG/",
+                    "source": "cve@mitre.org"
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/T52JATXV6NTPTMGXCRGT37H6KXERYNZN/",
+                    "source": "cve@mitre.org"
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2019-14296",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2019-07-27T19:15:12.097",
+            "lastModified": "2023-11-07T03:04:52.993",
+            "vulnStatus": "Modified",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "canUnpack in p_vmlinx.cpp in UPX 3.95 allows remote attackers to cause a denial of service (SEGV or buffer overflow, and application crash) or possibly have unspecified other impact via a crafted UPX packed file."
+                },
+                {
+                    "lang": "es",
+                    "value": "La funci\u00f3n canUnpack en el archivo p_vmlinx.cpp en UPX 3.95, permite a los atacantes remotos causar una denegaci\u00f3n de servicio (SEGV o desbordamiento de b\u00fafer y bloqueo de aplicaci\u00f3n) o posiblemente tener otro impacto no especificado por medio de un archivo empaquetado UPX especialmente dise\u00f1ado."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV30": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.0",
+                            "vectorString": "CVSS:3.0/AV:L/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 7.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-119"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:3.95:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "7986910F-E5B0-488F-813B-D6B4367F16F4"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00003.html",
+                    "source": "cve@mitre.org"
+                },
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00007.html",
+                    "source": "cve@mitre.org"
+                },
+                {
+                    "url": "https://github.com/upx/upx/issues/287",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/MOCJ43HTM45GZCAQ2FLEBDNBM76V22RG/",
+                    "source": "cve@mitre.org"
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/T52JATXV6NTPTMGXCRGT37H6KXERYNZN/",
+                    "source": "cve@mitre.org"
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2019-20021",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2019-12-27T02:15:10.797",
+            "lastModified": "2023-11-07T03:08:38.653",
+            "vulnStatus": "Modified",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A heap-based buffer over-read was discovered in canUnpack in p_mach.cpp in UPX 3.95 via a crafted Mach-O file."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se detect\u00f3 una lectura excesiva de b\u00fafer en la regi\u00f3n heap de la memoria en la funci\u00f3n canUnpack en el archivo p_mach.cpp en UPX versi\u00f3n 3.95 por medio de un archivo Mach-O dise\u00f1ado."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 5.5,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 3.6
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 4.3
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-125"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:3.95:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "7986910F-E5B0-488F-813B-D6B4367F16F4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:fedoraproject:fedora:30:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "97A4B8DF-58DA-4AB6-A1F9-331B36409BA3"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:fedoraproject:fedora:31:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "80F0FA5D-8D3B-4C0E-81E2-87998286AF33"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00003.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Broken Link"
+                    ]
+                },
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00007.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Broken Link"
+                    ]
+                },
+                {
+                    "url": "https://github.com/upx/upx/issues/315",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/D7XU42G6MUQQXHWRP7DCF2JSIBOJ5GOO/",
+                    "source": "cve@mitre.org"
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/EUTVSTXAFTD552NO2K2RIF6MDQEHP3BE/",
+                    "source": "cve@mitre.org"
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2019-20051",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2019-12-27T22:15:11.347",
+            "lastModified": "2023-11-07T03:08:38.973",
+            "vulnStatus": "Modified",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A floating-point exception was discovered in PackLinuxElf::elf_hash in p_lx_elf.cpp in UPX 3.95. The vulnerability causes an application crash, which leads to denial of service."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se descubri\u00f3 una excepci\u00f3n de punto flotante en la funci\u00f3n PackLinuxElf::elf_hash en el archivo p_lx_elf.cpp en UPX versi\u00f3n 3.95. La vulnerabilidad causa un bloqueo de la aplicaci\u00f3n, lo que conlleva a una denegaci\u00f3n de servicio."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 5.5,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 3.6
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 4.3
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-682"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:3.95:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "7986910F-E5B0-488F-813B-D6B4367F16F4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:fedoraproject:fedora:30:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "97A4B8DF-58DA-4AB6-A1F9-331B36409BA3"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:fedoraproject:fedora:31:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "80F0FA5D-8D3B-4C0E-81E2-87998286AF33"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/upx/upx/issues/313",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/D7XU42G6MUQQXHWRP7DCF2JSIBOJ5GOO/",
+                    "source": "cve@mitre.org"
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/EUTVSTXAFTD552NO2K2RIF6MDQEHP3BE/",
+                    "source": "cve@mitre.org"
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2019-20053",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2019-12-27T22:15:11.923",
+            "lastModified": "2022-01-01T20:08:27.467",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "An invalid memory address dereference was discovered in the canUnpack function in p_mach.cpp in UPX 3.95 via a crafted Mach-O file."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se descubri\u00f3 una desreferencia de direcci\u00f3n de memoria no v\u00e1lida en la funci\u00f3n canUnpack en el archivo p_mach.cpp en UPX versi\u00f3n 3.95 por medio de un archivo Mach-O especialmente dise\u00f1ado."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 5.5,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 3.6
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 4.3
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-119"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:3.95:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "7986910F-E5B0-488F-813B-D6B4367F16F4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:opensuse:backports:sle-15:sp1:*:*:*:*:*:*",
+                                    "matchCriteriaId": "C84D9410-31B7-421A-AD99-8ED2E45A9BC6"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:opensuse:leap:15.1:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "B620311B-34A3-48A6-82DF-6F078D7A4493"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00003.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2020-02/msg00007.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/upx/upx/issues/314",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2021-20285",
+            "sourceIdentifier": "secalert@redhat.com",
+            "published": "2021-03-26T17:15:13.140",
+            "lastModified": "2022-08-05T17:44:38.793",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "A flaw was found in upx canPack in p_lx_elf.cpp in UPX 3.96. This flaw allows attackers to cause a denial of service (SEGV or buffer overflow and application crash) or possibly have unspecified other impacts via a crafted ELF. The highest threat from this vulnerability is to system availability."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se detect\u00f3 un fallo en upx canPack en el archivo p_lx_elf.cpp en UPX versi\u00f3n 3.96. Este fallo permite a atacantes causar una denegaci\u00f3n de servicio (SEGV o desbordamiento de b\u00fafer y bloqueo de la aplicaci\u00f3n) o posiblemente tener otros impactos no especificados por medio de un ELF dise\u00f1ado. La mayor amenaza de esta vulnerabilidad es la disponibilidad del sistema."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:H",
+                            "attackVector": "LOCAL",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "LOW",
+                            "integrityImpact": "LOW",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 6.6,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 1.8,
+                        "impactScore": 4.7
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:C",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "COMPLETE",
+                            "baseScore": 8.3
+                        },
+                        "baseSeverity": "HIGH",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 8.5,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                },
+                {
+                    "source": "secalert@redhat.com",
+                    "type": "Secondary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-119"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:upx_project:upx:3.96:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "70995404-A343-41AF-9170-590CFEAA901B"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://bugzilla.redhat.com/show_bug.cgi?id=1937787",
+                    "source": "secalert@redhat.com",
+                    "tags": [
+                        "Issue Tracking",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/upx/upx/issues/421",
+                    "source": "secalert@redhat.com",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    }
+]

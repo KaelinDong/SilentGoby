@@ -1,0 +1,2893 @@
+[
+    {
+        "cve": {
+            "id": "CVE-2017-12597",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2017-08-07T01:29:00.390",
+            "lastModified": "2021-11-29T21:06:58.257",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "OpenCV (Open Source Computer Vision Library) through 3.3 has an out-of-bounds write error in the function FillColorRow1 in utils.cpp when reading an image file by using cv::imread."
+                },
+                {
+                    "lang": "es",
+                    "value": "La versi\u00f3n 3.3 de OpenCV (Open Source Computer Vision Library) provoca un error de escritura fuera de l\u00edmites en la funci\u00f3n FillColorRow1 en utils.cpp cuando lee una imagen utilizando cv::imread."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 8.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9309",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/xiaoqx/pocs/blob/master/opencv.md",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Broken Link",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://security.gentoo.org/glsa/201712-02",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2017-12598",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2017-08-07T01:29:00.420",
+            "lastModified": "2021-11-30T22:12:24.590",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "OpenCV (Open Source Computer Vision Library) through 3.3 has an out-of-bounds read error in the cv::RBaseStream::readBlock function in modules/imgcodecs/src/bitstrm.cpp when reading an image file by using cv::imread, as demonstrated by the 8-opencv-invalid-read-fread test case."
+                },
+                {
+                    "lang": "es",
+                    "value": "La versi\u00f3n 3.3 de OpenCV (Open Source Computer Vision Library) tiene un error de lectura fuera de l\u00edmites en la funci\u00f3n cv::RBaseStream::readBlock modules/imgcodecs/src/bitstrm.cpp cuando lee un archivo de imagen utilizando cv::imread. Esto se ha demostrado con la prueba8-opencv-invalid-read-fread."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 8.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-125"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9309",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/xiaoqx/pocs/blob/master/opencv.md",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Broken Link",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://security.gentoo.org/glsa/201712-02",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2017-12599",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2017-08-07T01:29:00.450",
+            "lastModified": "2021-11-30T22:12:30.557",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "OpenCV (Open Source Computer Vision Library) through 3.3 has an out-of-bounds read error in the function icvCvt_BGRA2BGR_8u_C4C3R when reading an image file by using cv::imread."
+                },
+                {
+                    "lang": "es",
+                    "value": "La versi\u00f3n 3.3 de OpenCV (Open Source Computer Vision Library) provoca un error de lectura fuera de l\u00edmites en la funci\u00f3n icvCvt_BGRA2BGR_8u_C4C3R cuando lee una imagen utilizando cv::imread."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 8.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-125"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9309",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/xiaoqx/pocs/blob/master/opencv.md",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Broken Link",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://security.gentoo.org/glsa/201712-02",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2017-12600",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2017-08-07T01:29:00.483",
+            "lastModified": "2019-10-03T00:03:26.223",
+            "vulnStatus": "Modified",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "OpenCV (Open Source Computer Vision Library) through 3.3 has a denial of service (CPU consumption) issue, as demonstrated by the 11-opencv-dos-cpu-exhaust test case."
+                },
+                {
+                    "lang": "es",
+                    "value": "La versi\u00f3n 3.3 de OpenCV (Open Source Computer Vision Library) tiene un problema de denegaci\u00f3n de servicio (consumo de CPU), como se ha demostrado con la prueba 11-opencv-dos-cpu-exhaust."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV30": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.0",
+                            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 7.5,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 3.6
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "LOW",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "COMPLETE",
+                            "baseScore": 7.8
+                        },
+                        "baseSeverity": "HIGH",
+                        "exploitabilityScore": 10.0,
+                        "impactScore": 6.9,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": false
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "NVD-CWE-noinfo"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9311",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/xiaoqx/pocs/blob/master/opencv.md",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://security.gentoo.org/glsa/201712-02",
+                    "source": "cve@mitre.org"
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2017-12601",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2017-08-07T01:29:00.513",
+            "lastModified": "2021-11-30T22:12:35.420",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "OpenCV (Open Source Computer Vision Library) through 3.3 has a buffer overflow in the cv::BmpDecoder::readData function in modules/imgcodecs/src/grfmt_bmp.cpp when reading an image file by using cv::imread, as demonstrated by the 4-buf-overflow-readData-memcpy test case."
+                },
+                {
+                    "lang": "es",
+                    "value": "La versi\u00f3n 3.3 de OpenCV (Open Source Computer Vision Library) tiene un desbordamiento de b\u00fafer en la funci\u00f3n cv::BmpDecoder::readData en modules/imgcodecs/src/grfmt_bmp.cpp cuando lee un archivo de imagen utilizando cv::imread. Esto se ha demostrado con la prueba 4-buf-overflow-readData-memcpy."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 8.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-120"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9309",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/xiaoqx/pocs/blob/master/opencv.md",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Broken Link",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://security.gentoo.org/glsa/201712-02",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2017-12602",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2017-08-07T01:29:00.547",
+            "lastModified": "2019-10-03T00:03:26.223",
+            "vulnStatus": "Modified",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "OpenCV (Open Source Computer Vision Library) through 3.3 has a denial of service (memory consumption) issue, as demonstrated by the 10-opencv-dos-memory-exhaust test case."
+                },
+                {
+                    "lang": "es",
+                    "value": "La versi\u00f3n 3.3 de OpenCV (Open Source Computer Vision Library) tiene un problema de denegaci\u00f3n de servicio (consumo de memoria), como se ha demostrado con la prueba 10-opencv-dos-memory-exhaust."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV30": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.0",
+                            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 7.5,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 3.6
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:C",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "LOW",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "COMPLETE",
+                            "baseScore": 7.8
+                        },
+                        "baseSeverity": "HIGH",
+                        "exploitabilityScore": 10.0,
+                        "impactScore": 6.9,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": false
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "NVD-CWE-noinfo"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9311",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/xiaoqx/pocs/blob/master/opencv.md",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://security.gentoo.org/glsa/201712-02",
+                    "source": "cve@mitre.org"
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2017-12603",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2017-08-07T01:29:00.577",
+            "lastModified": "2021-11-30T22:12:39.310",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "OpenCV (Open Source Computer Vision Library) through 3.3 has an invalid write in the cv::RLByteStream::getBytes function in modules/imgcodecs/src/bitstrm.cpp when reading an image file by using cv::imread, as demonstrated by the 2-opencv-heapoverflow-fseek test case."
+                },
+                {
+                    "lang": "es",
+                    "value": "La versi\u00f3n 3.3 de OpenCV (Open Source Computer Vision Library) tiene una escritura no v\u00e1lida en la funci\u00f3n cv::RLByteStream::getBytes en modules/imgcodecs/src/bitstrm.cpp. cuando lee un archivo de imagen utilizando cv::imread. Esto se ha demostrado con la prueba 2-opencv-heapoverflow-fseek."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 8.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9309",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/xiaoqx/pocs/blob/master/opencv.md",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Broken Link",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://security.gentoo.org/glsa/201712-02",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2017-12604",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2017-08-07T01:29:00.593",
+            "lastModified": "2021-11-30T22:12:47.717",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "OpenCV (Open Source Computer Vision Library) through 3.3 has an out-of-bounds write error in the FillUniColor function in utils.cpp when reading an image file by using cv::imread."
+                },
+                {
+                    "lang": "es",
+                    "value": "La versi\u00f3n 3.3 de OpenCV (Open Source Computer Vision Library) provoca un error de escritura fuera de l\u00edmites en la funci\u00f3n FillUniColor en utils.cpp cuando lee una imagen utilizando cv::imread."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 8.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9309",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/xiaoqx/pocs/blob/master/opencv.md",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Broken Link",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://security.gentoo.org/glsa/201712-02",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2017-12605",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2017-08-07T01:29:00.623",
+            "lastModified": "2021-11-30T22:13:00.693",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "OpenCV (Open Source Computer Vision Library) through 3.3 has an out-of-bounds write error in the FillColorRow8 function in utils.cpp when reading an image file by using cv::imread."
+                },
+                {
+                    "lang": "es",
+                    "value": "La versi\u00f3n 3.3 de OpenCV (Open Source Computer Vision Library) provoca un error de escritura fuera de l\u00edmites en la funci\u00f3n FillColorRow8 en utils.cpp cuando lee un archivo de imagen utilizando cv::imread."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 8.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9309",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/xiaoqx/pocs/blob/master/opencv.md",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Broken Link",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://security.gentoo.org/glsa/201712-02",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2017-12606",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2017-08-07T01:29:00.653",
+            "lastModified": "2021-11-30T22:12:55.517",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "OpenCV (Open Source Computer Vision Library) through 3.3 has an out-of-bounds write error in the function FillColorRow4 in utils.cpp when reading an image file by using cv::imread."
+                },
+                {
+                    "lang": "es",
+                    "value": "La versi\u00f3n 3.3 de OpenCV (Open Source Computer Vision Library) provoca un error de escritura fuera de l\u00edmites en la funci\u00f3n FillColorRow4 en utils.cpp cuando lee una imagen utilizando cv::imread."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 8.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9309",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/xiaoqx/pocs/blob/master/opencv.md",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Broken Link",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://security.gentoo.org/glsa/201712-02",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2017-12862",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2017-08-15T16:29:00.263",
+            "lastModified": "2021-11-30T22:07:12.220",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "In modules/imgcodecs/src/grfmt_pxm.cpp, the length of buffer AutoBuffer _src is small than expected, which will cause copy buffer overflow later. If the image is from remote, may lead to remote code execution or denial of service. This affects Opencv 3.3 and earlier."
+                },
+                {
+                    "lang": "es",
+                    "value": "En modules/imgcodecs/src/grfmt_pxm.cpp, el tama\u00f1o del b\u00fafer AutoBuffer _src es m\u00e1s peque\u00f1o de lo esperado, lo que causar\u00e1 un desbordamiento de b\u00fafer de copia posteriormente. Si la imagen proviene de una fuente remota, podr\u00eda provocar la ejecuci\u00f3n remota de c\u00f3digo o una denegaci\u00f3n de servicio. Esto afecta a la versi\u00f3n 3.3 de Opencv y anteriores."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 8.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9370",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://security.gentoo.org/glsa/201712-02",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2017-12863",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2017-08-15T16:29:00.293",
+            "lastModified": "2021-11-30T22:06:07.297",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "In opencv/modules/imgcodecs/src/grfmt_pxm.cpp, function PxMDecoder::readData has an integer overflow when calculate src_pitch. If the image is from remote, may lead to remote code execution or denial of service. This affects Opencv 3.3 and earlier."
+                },
+                {
+                    "lang": "es",
+                    "value": "En opencv/modules/imgcodecs/src/grfmt_pxm.cpp, la funci\u00f3n PxMDecoder::readData tiene un desbordamiento de enteros cuando calcula src_pitch. Si la imagen proviene de una fuente remota, podr\u00eda provocar la ejecuci\u00f3n remota de c\u00f3digo o una denegaci\u00f3n de servicio. Esto afecta a Opencv 3.3 y anteriores."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 8.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-190"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9371",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://security.gentoo.org/glsa/201712-02",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2017-12864",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2017-08-15T16:29:00.340",
+            "lastModified": "2021-11-30T22:05:59.273",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "In opencv/modules/imgcodecs/src/grfmt_pxm.cpp, function ReadNumber did not checkout the input length, which lead to integer overflow. If the image is from remote, may lead to remote code execution or denial of service. This affects Opencv 3.3 and earlier."
+                },
+                {
+                    "lang": "es",
+                    "value": "En opencv/modules/imgcodecs/src/grfmt_pxm.cpp, la funci\u00f3n ReadNumber no comprueba el tama\u00f1o de la entrada, lo que conduce a un desbordamiento de enteros. Si la imagen proviene de una fuente remota, podr\u00eda provocar la ejecuci\u00f3n remota de c\u00f3digo o una denegaci\u00f3n de servicio. Esto afecta a la versi\u00f3n 3.3 de Opencv y anteriores."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 8.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-190"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9372",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Issue Tracking",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://security.gentoo.org/glsa/201712-02",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2017-1000450",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2018-01-02T17:29:00.417",
+            "lastModified": "2021-11-30T22:05:51.677",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "In opencv/modules/imgcodecs/src/utils.cpp, functions FillUniColor and FillUniGray do not check the input length, which can lead to integer overflow. If the image is from remote, may lead to remote code execution or denial of service. This affects Opencv 3.3 and earlier."
+                },
+                {
+                    "lang": "es",
+                    "value": "En opencv/modules/imgcodecs/src/utils.cpp, las funciones FillUniColor y FillUniGray no comprueban la longitud de la entrada, lo que puede conducir a un desbordamiento de enteros. Si la imagen proviene de una fuente remota, podr\u00eda provocar la ejecuci\u00f3n remota de c\u00f3digo o una denegaci\u00f3n de servicio. Esto afecta a Opencv 3.3 y anteriores."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "REQUIRED",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "HIGH",
+                            "integrityImpact": "HIGH",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 8.8,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 2.8,
+                        "impactScore": 5.9
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:P/I:P/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "PARTIAL",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.8
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 6.4,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": true
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-190"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "3.3.0",
+                                    "matchCriteriaId": "74A9D1D1-1C36-42FF-90CE-C8557C5F9E6C"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:7.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "16F59A04-14CF-49E2-9973-645477EA09DA"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:8.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "C11E6FB0-C8C0-4527-9AA0-CB9B316F8F43"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/blendin/pocs/blob/master/opencv/0.OOB_Write_FillUniColor",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/opencv/opencv/issues/9723",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2018/01/msg00008.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2018/07/msg00030.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2019-14491",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2019-08-01T17:15:13.453",
+            "lastModified": "2023-11-07T03:04:56.250",
+            "vulnStatus": "Modified",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "An issue was discovered in OpenCV before 3.4.7 and 4.x before 4.1.1. There is an out of bounds read in the function cv::predictOrdered<cv::HaarEvaluator> in modules/objdetect/src/cascadedetect.hpp, which leads to denial of service."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se detect\u00f3 un problema en OpenCV anterior a versi\u00f3n 3.4.7 y versiones 4.x anteriores a 4.1.1. Se presenta una lectura fuera de l\u00edmites en la funci\u00f3n cv::predictOrdered(cv::HaarEvaluator) en el archivo modules/objdetect/src/cascadedetect.hpp, lo que conlleva a la denegaci\u00f3n de servicio."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV30": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.0",
+                            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "LOW",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 8.2,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 4.2
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "LOW",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.4
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 10.0,
+                        "impactScore": 4.9,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": false
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-125"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "3.4.7",
+                                    "matchCriteriaId": "218BB784-3C67-4D96-846B-02970872D450"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionStartIncluding": "4.0.0",
+                                    "versionEndExcluding": "4.1.1",
+                                    "matchCriteriaId": "AEB2D0E5-490D-4315-972B-936A2877C4DB"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00025.html",
+                    "source": "cve@mitre.org"
+                },
+                {
+                    "url": "https://github.com/opencv/opencv/compare/33b765d...4a7ca5a",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/opencv/opencv/compare/371bba8...ddbd10c",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/opencv/opencv/issues/15125",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.fedoraproject.org/archives/list/package-announce%40lists.fedoraproject.org/message/HPFLN6QAX6SUA4XR4NMKKXX26H3TYCVQ/",
+                    "source": "cve@mitre.org"
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2019-14492",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2019-08-01T17:15:13.530",
+            "lastModified": "2020-04-17T15:23:45.810",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "An issue was discovered in OpenCV before 3.4.7 and 4.x before 4.1.1. There is an out of bounds read/write in the function HaarEvaluator::OptFeature::calc in modules/objdetect/src/cascadedetect.hpp, which leads to denial of service."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se detect\u00f3 un problema en OpenCV anterior a versi\u00f3n 3.4.7 y versiones  4.x anteriores a 4.1.1. Se presenta  una lectura y escritura fuera de l\u00edmites en la funci\u00f3n HaarEvaluator::OptFeature::calc en el archivo modules/objdetect/src/cascadedetect.hpp, lo que conlleva a la denegaci\u00f3n de servicio."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 7.5,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 3.6
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "LOW",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 5.0
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 10.0,
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": false
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-125"
+                        },
+                        {
+                            "lang": "en",
+                            "value": "CWE-787"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "3.4.7",
+                                    "matchCriteriaId": "218BB784-3C67-4D96-846B-02970872D450"
+                                },
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionStartIncluding": "4.0.0",
+                                    "versionEndExcluding": "4.1.1",
+                                    "matchCriteriaId": "AEB2D0E5-490D-4315-972B-936A2877C4DB"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:opensuse:leap:15.1:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "B620311B-34A3-48A6-82DF-6F078D7A4493"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00025.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/opencv/opencv/compare/33b765d...4a7ca5a",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/opencv/opencv/compare/371bba8...ddbd10c",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/opencv/opencv/issues/15124",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2019-14493",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2019-08-01T17:15:13.593",
+            "lastModified": "2021-11-30T19:41:59.407",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "An issue was discovered in OpenCV before 4.1.1. There is a NULL pointer dereference in the function cv::XMLParser::parse at modules/core/src/persistence.cpp."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se detect\u00f3 un problema en OpenCV anterior a versi\u00f3n 4.1.1. Se presenta una desreferencia de puntero NULL en la funci\u00f3n cv::XMLParser::parse en el archivo  modules/core/src/persistence.cpp."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 7.5,
+                            "baseSeverity": "HIGH"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 3.6
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:L/Au:N/C:N/I:N/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "LOW",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 5.0
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 10.0,
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": false
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-476"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "4.1.1",
+                                    "matchCriteriaId": "B00DAA9A-1738-491E-9220-BFFB8580CAB4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://github.com/opencv/opencv/compare/371bba8...ddbd10c",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/opencv/opencv/issues/15127",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2019-15939",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2019-09-05T16:15:11.963",
+            "lastModified": "2021-11-30T19:42:04.763",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "An issue was discovered in OpenCV 4.1.0. There is a divide-by-zero error in cv::HOGDescriptor::getDescriptorSize in modules/objdetect/src/hog.cpp."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se detect\u00f3 un problema en OpenCV versi\u00f3n 4.1.0. Hay un error de divisi\u00f3n por cero en cv::HOGDescriptor::getDescriptorSize in modules/objdetect/src/hog.cpp."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "HIGH",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "HIGH",
+                            "baseScore": 5.9,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 2.2,
+                        "impactScore": 3.6
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:M/Au:N/C:N/I:N/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "MEDIUM",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "NONE",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 4.3
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 8.6,
+                        "impactScore": 2.9,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": false
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-369"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndIncluding": "4.1.0",
+                                    "matchCriteriaId": "80A5909B-6FA8-4988-8311-FEEF7771A092"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:opensuse:leap:15.1:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "B620311B-34A3-48A6-82DF-6F078D7A4493"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:debian:debian_linux:9.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "DEECE5FC-CACF-4496-A3E7-164736409252"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "http://lists.opensuse.org/opensuse-security-announce/2019-12/msg00025.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/OpenCV/opencv/issues/15287",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/opencv/opencv/pull/15382",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://lists.debian.org/debian-lts-announce/2021/10/msg00028.html",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Mailing List",
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "cve": {
+            "id": "CVE-2019-19624",
+            "sourceIdentifier": "cve@mitre.org",
+            "published": "2019-12-06T15:15:10.330",
+            "lastModified": "2019-12-17T20:48:25.560",
+            "vulnStatus": "Analyzed",
+            "cveTags": [],
+            "descriptions": [
+                {
+                    "lang": "en",
+                    "value": "An out-of-bounds read was discovered in OpenCV before 4.1.1. Specifically, variable coarsest_scale is assumed to be greater than or equal to finest_scale within the calc()/ocl_calc() functions in dis_flow.cpp. However, this is not true when dealing with small images, leading to an out-of-bounds read of the heap-allocated arrays Ux and Uy."
+                },
+                {
+                    "lang": "es",
+                    "value": "Se detect\u00f3 una lectura fuera de l\u00edmites en OpenCV versiones anteriores a 4.1.1. Espec\u00edficamente, una variable coarsest_scale es asumida para ser mayor o igual que finest_scale dentro de las funciones calc() y ocl_calc() en el archivo dis_flow.cpp. Sin embargo, esto no es cierto cuando se trata de im\u00e1genes peque\u00f1as, conllevando a una lectura fuera de l\u00edmites de las matrices Ux y Uy asignadas de la pila."
+                }
+            ],
+            "metrics": {
+                "cvssMetricV31": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "3.1",
+                            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:L",
+                            "attackVector": "NETWORK",
+                            "attackComplexity": "LOW",
+                            "privilegesRequired": "NONE",
+                            "userInteraction": "NONE",
+                            "scope": "UNCHANGED",
+                            "confidentialityImpact": "LOW",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "LOW",
+                            "baseScore": 6.5,
+                            "baseSeverity": "MEDIUM"
+                        },
+                        "exploitabilityScore": 3.9,
+                        "impactScore": 2.5
+                    }
+                ],
+                "cvssMetricV2": [
+                    {
+                        "source": "nvd@nist.gov",
+                        "type": "Primary",
+                        "cvssData": {
+                            "version": "2.0",
+                            "vectorString": "AV:N/AC:L/Au:N/C:P/I:N/A:P",
+                            "accessVector": "NETWORK",
+                            "accessComplexity": "LOW",
+                            "authentication": "NONE",
+                            "confidentialityImpact": "PARTIAL",
+                            "integrityImpact": "NONE",
+                            "availabilityImpact": "PARTIAL",
+                            "baseScore": 6.4
+                        },
+                        "baseSeverity": "MEDIUM",
+                        "exploitabilityScore": 10.0,
+                        "impactScore": 4.9,
+                        "acInsufInfo": false,
+                        "obtainAllPrivilege": false,
+                        "obtainUserPrivilege": false,
+                        "obtainOtherPrivilege": false,
+                        "userInteractionRequired": false
+                    }
+                ]
+            },
+            "weaknesses": [
+                {
+                    "source": "nvd@nist.gov",
+                    "type": "Primary",
+                    "description": [
+                        {
+                            "lang": "en",
+                            "value": "CWE-125"
+                        }
+                    ]
+                }
+            ],
+            "configurations": [
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:a:opencv:opencv:*:*:*:*:*:*:*:*",
+                                    "versionEndExcluding": "4.1.1",
+                                    "matchCriteriaId": "B00DAA9A-1738-491E-9220-BFFB8580CAB4"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "nodes": [
+                        {
+                            "operator": "OR",
+                            "negate": false,
+                            "cpeMatch": [
+                                {
+                                    "vulnerable": true,
+                                    "criteria": "cpe:2.3:o:redhat:enterprise_linux:8.0:*:*:*:*:*:*:*",
+                                    "matchCriteriaId": "F4CFF558-3C47-480D-A2F0-BABF26042943"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "references": [
+                {
+                    "url": "https://access.redhat.com/security/cve/cve-2019-19624",
+                    "source": "nvd@nist.gov",
+                    "tags": [
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/opencv/opencv/commit/d1615ba11a93062b1429fce9f0f638d1572d3418",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Patch",
+                        "Third Party Advisory"
+                    ]
+                },
+                {
+                    "url": "https://github.com/opencv/opencv/issues/14554",
+                    "source": "cve@mitre.org",
+                    "tags": [
+                        "Exploit",
+                        "Issue Tracking",
+                        "Third Party Advisory"
+                    ]
+                }
+            ]
+        }
+    }
+]
